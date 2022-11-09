@@ -1,6 +1,5 @@
 import boto3
 import pandas as pd
-import json
 
 
 def set_up():
@@ -10,7 +9,7 @@ def set_up():
 def format_data(color_data):
     def normalize_phone_num(phone_num):
         phone_num = str(phone_num)
-        return phone_num[1:4] + '-' + phone_num[4:7] + '-' + phone_num[7:]
+        return phone_num[1:]
 
     def format_phone_number(data):
         data['Phone #'] = data['Phone #'].apply(normalize_phone_num)
@@ -40,7 +39,8 @@ def upload_phone_num_data_to_table(resource, item_json):
 def upload_batch_data(resource, phone_number_list, color_data):
     for curr, phone_number in enumerate(phone_number_list[:3]):  ## Get rid of [:3] for all phone numbers
         phone_num_data = get_color_counts_dict_for_phone_number(color_data, phone_number)
-        upload_phone_num_data_to_table(resource, phone_num_data)
+        print(phone_num_data)
+        # upload_phone_num_data_to_table(resource, phone_num_data)
         print(f"---{curr + 1}/{len(phone_number_list)} uploaded.---")
 
 
