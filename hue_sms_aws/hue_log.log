@@ -1,0 +1,2055 @@
+2022-11-09 17:40:41,480:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 17:41:06,181:INFO:Attempting to connect to the bridge...
+2022-11-09 17:41:06,182:INFO:Using ip: 192.168.4.64
+2022-11-09 17:41:06,214:INFO:Error opening config file, will attempt bridge registration
+2022-11-09 17:41:06,231:INFO:Server unable to connect to the Hue Light
+2022-11-09 17:41:06,234:INFO:127.0.0.1 - - [09/Nov/2022 17:41:06] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMd37baee5d2df0848e7dcdc61afa01b4d&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMd37baee5d2df0848e7dcdc61afa01b4d&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMd37baee5d2df0848e7dcdc61afa01b4d&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:41:15,345:INFO:Server has been stopped
+2022-11-09 17:41:42,610:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 17:41:50,920:INFO:Attempting to connect to the bridge...
+2022-11-09 17:41:50,921:INFO:Using ip: 192.168.4.64
+2022-11-09 17:41:50,921:INFO:Error opening config file, will attempt bridge registration
+2022-11-09 17:41:50,940:INFO:Writing configuration file to /Users/jack11wagner/.python_hue
+2022-11-09 17:41:50,940:INFO:Reconnecting to the bridge
+2022-11-09 17:41:50,941:INFO:Attempting to connect to the bridge...
+2022-11-09 17:41:50,941:INFO:Using ip: 192.168.4.64
+2022-11-09 17:41:50,941:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:41:50,941:INFO:Attempting to connect to the bridge...
+2022-11-09 17:41:50,942:INFO:Using ip: 192.168.4.64
+2022-11-09 17:41:50,942:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:41:50,942:INFO:Server was successfully able to connect to the bridge
+2022-11-09 17:41:50,986:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 17:41:51,092:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 120, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 10, in write_to_dynamo
+    return client.invoke(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 507, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 902, in _make_api_call
+    request_dict = self._convert_to_request_dict(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 973, in _convert_to_request_dict
+    request_dict = self._serializer.serialize_to_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/validate.py", line 381, in serialize_to_request
+    raise ParamValidationError(report=report.generate_report())
+botocore.exceptions.ParamValidationError: Parameter validation failed:
+Invalid type for parameter Payload, value: {'14842747408': 'blue'}, type: <class 'dict'>, valid types: <class 'bytes'>, <class 'bytearray'>, file-like object
+2022-11-09 17:41:51,101:INFO:127.0.0.1 - - [09/Nov/2022 17:41:51] "[35m[1mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMdc96bd3993770ef5c88cfba291562352&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMdc96bd3993770ef5c88cfba291562352&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMdc96bd3993770ef5c88cfba291562352&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 500 -
+2022-11-09 17:42:03,889:INFO:Server has been stopped
+2022-11-09 17:42:19,446:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 17:42:22,049:INFO:Attempting to connect to the bridge...
+2022-11-09 17:42:22,050:INFO:Using ip: 192.168.4.64
+2022-11-09 17:42:22,050:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:42:22,050:INFO:Attempting to connect to the bridge...
+2022-11-09 17:42:22,050:INFO:Using ip: 192.168.4.64
+2022-11-09 17:42:22,050:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:42:22,050:INFO:Server was successfully able to connect to the bridge
+2022-11-09 17:42:22,255:INFO:The light was changed to the color blue
+2022-11-09 17:42:22,268:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-09 17:42:22,271:INFO:127.0.0.1 - - [09/Nov/2022 17:42:22] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMb76195167e2f46c6f07ad1df38e29a8e&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMb76195167e2f46c6f07ad1df38e29a8e&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMb76195167e2f46c6f07ad1df38e29a8e&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:42:30,826:INFO:Server has been stopped
+2022-11-09 17:42:33,946:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 17:42:38,464:INFO:Attempting to connect to the bridge...
+2022-11-09 17:42:38,464:INFO:Using ip: 192.168.4.64
+2022-11-09 17:42:38,465:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:42:38,465:INFO:Attempting to connect to the bridge...
+2022-11-09 17:42:38,465:INFO:Using ip: 192.168.4.64
+2022-11-09 17:42:38,465:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:42:38,465:INFO:Server was successfully able to connect to the bridge
+2022-11-09 17:42:44,589:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 17:43:17,246:INFO:Server has been stopped
+2022-11-09 17:52:39,694:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 17:52:56,428:INFO:Attempting to connect to the bridge...
+2022-11-09 17:52:56,428:INFO:Using ip: 192.168.4.64
+2022-11-09 17:52:56,428:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:52:56,428:INFO:Attempting to connect to the bridge...
+2022-11-09 17:52:56,428:INFO:Using ip: 192.168.4.64
+2022-11-09 17:52:56,428:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:52:56,429:INFO:Server was successfully able to connect to the bridge
+2022-11-09 17:52:56,475:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 17:52:56,784:INFO:The light was changed to the color blue
+2022-11-09 17:52:56,798:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-09 17:52:56,801:INFO:127.0.0.1 - - [09/Nov/2022 17:52:56] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM042e4ca01bbe105a7958c5b384f73403&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM042e4ca01bbe105a7958c5b384f73403&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM042e4ca01bbe105a7958c5b384f73403&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:53:05,136:INFO:The light was changed to the color blue
+2022-11-09 17:53:05,149:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-09 17:53:05,150:INFO:127.0.0.1 - - [09/Nov/2022 17:53:05] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM8919b024e8a66e3d6d388495e9e141dc&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM8919b024e8a66e3d6d388495e9e141dc&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM8919b024e8a66e3d6d388495e9e141dc&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:53:14,938:INFO:The light was changed to the color blue
+2022-11-09 17:53:14,951:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-09 17:53:14,951:INFO:127.0.0.1 - - [09/Nov/2022 17:53:14] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM4b00b2d58a78c6b48aa8d7669bca221d&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM4b00b2d58a78c6b48aa8d7669bca221d&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM4b00b2d58a78c6b48aa8d7669bca221d&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:53:39,639:INFO:The light was changed to the color blue
+2022-11-09 17:53:39,653:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-09 17:53:39,654:INFO:127.0.0.1 - - [09/Nov/2022 17:53:39] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMb261b76002ff16623230b9fb1ce4f2d8&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMb261b76002ff16623230b9fb1ce4f2d8&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMb261b76002ff16623230b9fb1ce4f2d8&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:54:03,075:INFO:The light was changed to the color red
+2022-11-09 17:54:03,088:INFO:Color red has been set by the phone number +14842747408.
+2022-11-09 17:54:03,089:INFO:127.0.0.1 - - [09/Nov/2022 17:54:03] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMce69814aec3c286a0f76f3c46d0e3946&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMce69814aec3c286a0f76f3c46d0e3946&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMce69814aec3c286a0f76f3c46d0e3946&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:56:54,966:INFO:The light was changed to the color blue
+2022-11-09 17:56:54,982:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-09 17:56:54,985:INFO:127.0.0.1 - - [09/Nov/2022 17:56:54] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM199297d1855201bfc84477da6422b394&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM199297d1855201bfc84477da6422b394&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM199297d1855201bfc84477da6422b394&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:58:02,076:INFO:The light was changed to the color green
+2022-11-09 17:58:02,092:INFO:Color green has been set by the phone number +14842747408.
+2022-11-09 17:58:02,093:INFO:127.0.0.1 - - [09/Nov/2022 17:58:02] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM41c2593e27c9a86df9d14480a1f78364&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM41c2593e27c9a86df9d14480a1f78364&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Green&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM41c2593e27c9a86df9d14480a1f78364&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 17:58:49,564:INFO:Server has been stopped
+2022-11-09 17:58:51,144:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 17:59:30,893:INFO:Server has been stopped
+2022-11-09 17:59:32,104:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 17:59:35,858:INFO:Attempting to connect to the bridge...
+2022-11-09 17:59:35,859:INFO:Using ip: 192.168.4.64
+2022-11-09 17:59:35,859:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:59:35,859:INFO:Attempting to connect to the bridge...
+2022-11-09 17:59:35,860:INFO:Using ip: 192.168.4.64
+2022-11-09 17:59:35,860:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 17:59:35,860:INFO:Server was successfully able to connect to the bridge
+2022-11-09 17:59:35,900:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 17:59:36,198:INFO:The light was changed to the color royal purple
+2022-11-09 17:59:36,210:INFO:Color royal purple has been set by the phone number +14842747408.
+2022-11-09 17:59:36,211:INFO:127.0.0.1 - - [09/Nov/2022 17:59:36] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM0788e554277eb7f07cf052cbe6f656d6&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM0788e554277eb7f07cf052cbe6f656d6&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Royal+purple&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM0788e554277eb7f07cf052cbe6f656d6&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:00:14,683:INFO:The light was changed to the color royal purple
+2022-11-09 18:00:14,696:INFO:Color royal purple has been set by the phone number +14842747408.
+2022-11-09 18:00:14,696:INFO:127.0.0.1 - - [09/Nov/2022 18:00:14] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMabcdbda2547f87c9a0445ec84673bcf7&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMabcdbda2547f87c9a0445ec84673bcf7&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Royal+purple&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMabcdbda2547f87c9a0445ec84673bcf7&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:03:22,460:INFO:Server has been stopped
+2022-11-09 18:03:23,765:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 18:03:31,744:INFO:Attempting to connect to the bridge...
+2022-11-09 18:03:31,745:INFO:Using ip: 192.168.4.64
+2022-11-09 18:03:31,745:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:03:31,745:INFO:Attempting to connect to the bridge...
+2022-11-09 18:03:31,745:INFO:Using ip: 192.168.4.64
+2022-11-09 18:03:31,745:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:03:31,745:INFO:Server was successfully able to connect to the bridge
+2022-11-09 18:03:31,790:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 18:03:32,150:INFO:The light was changed to the color red
+2022-11-09 18:03:32,167:INFO:Color red has been set by the phone number +14842747408.
+2022-11-09 18:03:32,169:INFO:127.0.0.1 - - [09/Nov/2022 18:03:32] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMcfe3aab2f587af915635e9231880a44f&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMcfe3aab2f587af915635e9231880a44f&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMcfe3aab2f587af915635e9231880a44f&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:04:08,081:INFO:The light was changed to the color green
+2022-11-09 18:04:08,094:INFO:Color green has been set by the phone number +14842747408.
+2022-11-09 18:04:08,095:INFO:127.0.0.1 - - [09/Nov/2022 18:04:08] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM099f644328163befab042b8e8cfc841f&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM099f644328163befab042b8e8cfc841f&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Green&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM099f644328163befab042b8e8cfc841f&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:04:35,015:INFO:Server has been stopped
+2022-11-09 18:04:36,235:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 18:04:41,205:INFO:Attempting to connect to the bridge...
+2022-11-09 18:04:41,206:INFO:Using ip: 192.168.4.64
+2022-11-09 18:04:41,206:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:04:41,206:INFO:Attempting to connect to the bridge...
+2022-11-09 18:04:41,206:INFO:Using ip: 192.168.4.64
+2022-11-09 18:04:41,206:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:04:41,206:INFO:Server was successfully able to connect to the bridge
+2022-11-09 18:04:41,249:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 18:04:41,533:INFO:The light was changed to the color green
+2022-11-09 18:04:41,546:INFO:Color green has been set by the phone number +14842747408.
+2022-11-09 18:04:41,549:INFO:127.0.0.1 - - [09/Nov/2022 18:04:41] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM94c61da05e9d333505ad25e6274ff767&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM94c61da05e9d333505ad25e6274ff767&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Green&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM94c61da05e9d333505ad25e6274ff767&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:06:31,342:INFO:Server has been stopped
+2022-11-09 18:06:32,578:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 18:06:37,998:INFO:Attempting to connect to the bridge...
+2022-11-09 18:06:37,999:INFO:Using ip: 192.168.4.64
+2022-11-09 18:06:37,999:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:06:38,000:INFO:Attempting to connect to the bridge...
+2022-11-09 18:06:38,000:INFO:Using ip: 192.168.4.64
+2022-11-09 18:06:38,000:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:06:38,000:INFO:Server was successfully able to connect to the bridge
+2022-11-09 18:06:38,050:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 18:06:38,277:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 120, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 16, in write_to_dynamo
+    print('message:', message['HTTPStatusCode'])
+KeyError: 'HTTPStatusCode'
+2022-11-09 18:06:38,284:INFO:127.0.0.1 - - [09/Nov/2022 18:06:38] "[35m[1mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMc1c92dade0ce1ca41ba8a1224c4ee2ee&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMc1c92dade0ce1ca41ba8a1224c4ee2ee&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMc1c92dade0ce1ca41ba8a1224c4ee2ee&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 500 -
+2022-11-09 18:06:57,961:INFO:Server has been stopped
+2022-11-09 18:06:59,256:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-09 18:07:03,319:INFO:Attempting to connect to the bridge...
+2022-11-09 18:07:03,320:INFO:Using ip: 192.168.4.64
+2022-11-09 18:07:03,320:INFO:Using username from config: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:07:03,320:INFO:Attempting to connect to the bridge...
+2022-11-09 18:07:03,320:INFO:Using ip: 192.168.4.64
+2022-11-09 18:07:03,320:INFO:Using username: paTAQShbiHqTeBgX1B3OGYSQUmPqJkNnYRiv-Tda
+2022-11-09 18:07:03,320:INFO:Server was successfully able to connect to the bridge
+2022-11-09 18:07:03,359:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-09 18:07:03,595:INFO:The light was changed to the color red
+2022-11-09 18:07:03,607:INFO:Color red has been set by the phone number +14842747408.
+2022-11-09 18:07:03,609:INFO:127.0.0.1 - - [09/Nov/2022 18:07:03] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMf7fea0a01431630093643d3b2dc5ecbe&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMf7fea0a01431630093643d3b2dc5ecbe&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMf7fea0a01431630093643d3b2dc5ecbe&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:07:20,280:INFO:Color golf was not recognized
+2022-11-09 18:07:20,281:INFO:127.0.0.1 - - [09/Nov/2022 18:07:20] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM2f65063b221fa44d357eac3f2c38c8d1&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM2f65063b221fa44d357eac3f2c38c8d1&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Golf&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM2f65063b221fa44d357eac3f2c38c8d1&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:07:23,632:INFO:Color golf was not recognized
+2022-11-09 18:07:23,634:INFO:127.0.0.1 - - [09/Nov/2022 18:07:23] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMcf69558418f903102670fba9e6122a83&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMcf69558418f903102670fba9e6122a83&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Golf&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMcf69558418f903102670fba9e6122a83&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:07:26,130:INFO:Color golf was not recognized
+2022-11-09 18:07:26,131:INFO:127.0.0.1 - - [09/Nov/2022 18:07:26] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM0a196461fb0009fcfdd8ea72ecc12288&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM0a196461fb0009fcfdd8ea72ecc12288&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Golf&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM0a196461fb0009fcfdd8ea72ecc12288&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:07:28,488:INFO:The light was changed to the color gold
+2022-11-09 18:07:28,501:INFO:Color gold has been set by the phone number +14842747408.
+2022-11-09 18:07:28,502:INFO:127.0.0.1 - - [09/Nov/2022 18:07:28] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM6ddb2feb09759891339f02e1d2cfba61&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM6ddb2feb09759891339f02e1d2cfba61&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Gold&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM6ddb2feb09759891339f02e1d2cfba61&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:09:05,761:INFO:The light was changed to the color blue
+2022-11-09 18:09:05,773:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-09 18:09:05,774:INFO:127.0.0.1 - - [09/Nov/2022 18:09:05] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMa2450ba9ad98e98209eb405fa23449be&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMa2450ba9ad98e98209eb405fa23449be&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMa2450ba9ad98e98209eb405fa23449be&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:10:46,062:INFO:The light was changed to the color royal purple
+2022-11-09 18:10:46,073:INFO:Color royal purple has been set by the phone number +14842747408.
+2022-11-09 18:10:46,074:INFO:127.0.0.1 - - [09/Nov/2022 18:10:46] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM79ebc6c1ace78397470bd58ffc08402e&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM79ebc6c1ace78397470bd58ffc08402e&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Royal+purple&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM79ebc6c1ace78397470bd58ffc08402e&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-09 18:10:49,162:INFO:Server has been stopped
+2022-11-14 07:55:19,521:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-14 07:55:37,730:INFO:Attempting to connect to the bridge...
+2022-11-14 07:55:37,731:INFO:Using ip: 172.31.228.43
+2022-11-14 07:55:37,731:INFO:Error opening config file, will attempt bridge registration
+2022-11-14 07:55:37,755:INFO:Writing configuration file to /Users/jack11wagner/.python_hue
+2022-11-14 07:55:37,755:INFO:Reconnecting to the bridge
+2022-11-14 07:55:37,755:INFO:Attempting to connect to the bridge...
+2022-11-14 07:55:37,756:INFO:Using ip: 172.31.228.43
+2022-11-14 07:55:37,756:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:55:37,756:INFO:Attempting to connect to the bridge...
+2022-11-14 07:55:37,756:INFO:Using ip: 172.31.228.43
+2022-11-14 07:55:37,756:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:55:37,756:INFO:Server was successfully able to connect to the bridge
+2022-11-14 07:55:37,795:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-14 07:55:37,968:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 120, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 11, in write_to_dynamo
+    message =  client.invoke(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 507, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 943, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredTokenException) when calling the Invoke operation: The security token included in the request is expired
+2022-11-14 07:55:37,977:INFO:127.0.0.1 - - [14/Nov/2022 07:55:37] "[35m[1mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM83887edb7c8ce4784785a13e2117a814&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM83887edb7c8ce4784785a13e2117a814&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM83887edb7c8ce4784785a13e2117a814&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 500 -
+2022-11-14 07:56:03,594:INFO:Server has been stopped
+2022-11-14 07:56:05,526:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-14 07:56:22,431:INFO:Server has been stopped
+2022-11-14 07:56:28,571:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-14 07:56:32,062:INFO:Attempting to connect to the bridge...
+2022-11-14 07:56:32,063:INFO:Using ip: 172.31.228.43
+2022-11-14 07:56:32,063:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:56:32,063:INFO:Attempting to connect to the bridge...
+2022-11-14 07:56:32,063:INFO:Using ip: 172.31.228.43
+2022-11-14 07:56:32,063:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:56:32,064:INFO:Server was successfully able to connect to the bridge
+2022-11-14 07:56:38,810:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-14 07:56:49,330:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 120, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 11, in write_to_dynamo
+    message =  client.invoke(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 507, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 943, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredTokenException) when calling the Invoke operation: The security token included in the request is expired
+2022-11-14 07:56:49,364:INFO:127.0.0.1 - - [14/Nov/2022 07:56:49] "[35m[1mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM20a5f2b0a13db9eff5958b7378ffbc03&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM20a5f2b0a13db9eff5958b7378ffbc03&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM20a5f2b0a13db9eff5958b7378ffbc03&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 500 -
+2022-11-14 07:57:24,953:INFO:Server has been stopped
+2022-11-14 07:57:27,715:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-14 07:57:31,652:INFO:Attempting to connect to the bridge...
+2022-11-14 07:57:31,654:INFO:Using ip: 172.31.228.43
+2022-11-14 07:57:31,655:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:57:31,655:INFO:Attempting to connect to the bridge...
+2022-11-14 07:57:31,655:INFO:Using ip: 172.31.228.43
+2022-11-14 07:57:31,655:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:57:31,655:INFO:Server was successfully able to connect to the bridge
+2022-11-14 07:57:31,719:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-14 07:57:31,935:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 120, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 11, in write_to_dynamo
+    message =  client.invoke(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 507, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 943, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredTokenException) when calling the Invoke operation: The security token included in the request is expired
+2022-11-14 07:57:31,942:INFO:127.0.0.1 - - [14/Nov/2022 07:57:31] "[35m[1mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM188d7b9d0f3294b9b5cd0345f0f19af8&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM188d7b9d0f3294b9b5cd0345f0f19af8&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM188d7b9d0f3294b9b5cd0345f0f19af8&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 500 -
+2022-11-14 07:58:16,036:INFO:Server has been stopped
+2022-11-14 07:58:17,755:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-14 07:58:31,073:INFO:Attempting to connect to the bridge...
+2022-11-14 07:58:31,073:INFO:Using ip: 172.31.228.43
+2022-11-14 07:58:31,074:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:58:31,074:INFO:Attempting to connect to the bridge...
+2022-11-14 07:58:31,074:INFO:Using ip: 172.31.228.43
+2022-11-14 07:58:31,074:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 07:58:31,074:INFO:Server was successfully able to connect to the bridge
+2022-11-14 07:58:31,121:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-14 07:58:31,359:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 120, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 11, in write_to_dynamo
+    message =  client.invoke(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 507, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 943, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredTokenException) when calling the Invoke operation: The security token included in the request is expired
+2022-11-14 07:58:31,367:INFO:127.0.0.1 - - [14/Nov/2022 07:58:31] "[35m[1mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMd00a9250a5c37d727d5089a2204faa83&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMd00a9250a5c37d727d5089a2204faa83&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMd00a9250a5c37d727d5089a2204faa83&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 500 -
+2022-11-14 07:58:41,608:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 120, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 11, in write_to_dynamo
+    message =  client.invoke(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 507, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/botocore/client.py", line 943, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ExpiredTokenException) when calling the Invoke operation: The security token included in the request is expired
+2022-11-14 07:58:41,609:INFO:127.0.0.1 - - [14/Nov/2022 07:58:41] "[35m[1mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMe810cc8e3c706a2fa2c9fc029256a7bf&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMe810cc8e3c706a2fa2c9fc029256a7bf&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMe810cc8e3c706a2fa2c9fc029256a7bf&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 500 -
+2022-11-14 07:58:56,437:INFO:Server has been stopped
+2022-11-14 08:07:56,325:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-14 08:08:06,114:INFO:Attempting to connect to the bridge...
+2022-11-14 08:08:06,115:INFO:Using ip: 172.31.228.43
+2022-11-14 08:08:06,115:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 08:08:06,116:INFO:Attempting to connect to the bridge...
+2022-11-14 08:08:06,116:INFO:Using ip: 172.31.228.43
+2022-11-14 08:08:06,116:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 08:08:06,116:INFO:Server was successfully able to connect to the bridge
+2022-11-14 08:08:06,177:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-14 08:08:07,273:INFO:The light was changed to the color red
+2022-11-14 08:08:07,286:INFO:Color red has been set by the phone number +14842747408.
+2022-11-14 08:08:07,292:INFO:127.0.0.1 - - [14/Nov/2022 08:08:07] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMfce897a15459a50347a2363cb390b502&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMfce897a15459a50347a2363cb390b502&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMfce897a15459a50347a2363cb390b502&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-14 09:36:37,404:INFO:Server has been stopped
+2022-11-14 09:36:42,429:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-14 09:37:10,915:INFO:Attempting to connect to the bridge...
+2022-11-14 09:37:10,918:INFO:Using ip: 172.31.228.43
+2022-11-14 09:37:10,918:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 09:37:10,918:INFO:Attempting to connect to the bridge...
+2022-11-14 09:37:10,918:INFO:Using ip: 172.31.228.43
+2022-11-14 09:37:10,918:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-14 09:37:10,918:INFO:Server was successfully able to connect to the bridge
+2022-11-14 09:37:10,992:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-14 09:37:11,438:INFO:The light was changed to the color blue
+2022-11-14 09:37:11,451:INFO:Color blue has been set by the phone number +14842747408.
+2022-11-14 09:37:11,456:INFO:127.0.0.1 - - [14/Nov/2022 09:37:11] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM3ff43153e3ed74194918d08cf78045f0&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM3ff43153e3ed74194918d08cf78045f0&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Blue&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM3ff43153e3ed74194918d08cf78045f0&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-14 09:43:54,912:INFO:The light was changed to the color red
+2022-11-14 09:43:54,930:INFO:Color red has been set by the phone number +14842747408.
+2022-11-14 09:43:54,934:INFO:127.0.0.1 - - [14/Nov/2022 09:43:54] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM88fe140d14a55d2c7c4d53142580ee3e&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM88fe140d14a55d2c7c4d53142580ee3e&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM88fe140d14a55d2c7c4d53142580ee3e&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-14 09:50:10,267:INFO:The light was changed to the color red
+2022-11-14 09:50:10,280:INFO:Color red has been set by the phone number +14842747408.
+2022-11-14 09:50:10,283:INFO:127.0.0.1 - - [14/Nov/2022 09:50:10] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM5b502ea6e11874a2a29114f8ff069d31&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM5b502ea6e11874a2a29114f8ff069d31&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Red&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM5b502ea6e11874a2a29114f8ff069d31&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-14 09:50:53,033:INFO:The light was changed to the color royal purple
+2022-11-14 09:50:53,088:INFO:Color royal purple has been set by the phone number +14842747408.
+2022-11-14 09:50:53,098:INFO:127.0.0.1 - - [14/Nov/2022 09:50:53] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SM164e03ca1c77cd08723e39ec3f8eefdd&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SM164e03ca1c77cd08723e39ec3f8eefdd&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Royal+purple&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SM164e03ca1c77cd08723e39ec3f8eefdd&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-14 10:02:30,107:INFO:The light was changed to the color macaroni and cheese
+2022-11-14 10:02:30,129:INFO:Color macaroni and cheese has been set by the phone number +14842747408.
+2022-11-14 10:02:30,143:INFO:127.0.0.1 - - [14/Nov/2022 10:02:30] "[37mGET /?ToCountry=US&ToState=MA&SmsMessageSid=SMe3677051cf16d63d982383b104b9afcb&NumMedia=0&ToCity=&FromZip=19403&SmsSid=SMe3677051cf16d63d982383b104b9afcb&FromState=PA&SmsStatus=received&FromCity=NORRISTOWN&Body=Macaroni+and+cheese&FromCountry=US&To=%2B18573203440&ToZip=&NumSegments=1&ReferralNumMedia=0&MessageSid=SMe3677051cf16d63d982383b104b9afcb&AccountSid=AC936b63ee32f2eafdb36d2a0a39a7d49b&From=%2B14842747408&ApiVersion=2010-04-01 HTTP/1.1[0m" 200 -
+2022-11-16 16:01:29,948:INFO:Server has been stopped
+2022-11-21 10:55:52,183:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 10:57:06,209:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:06,217:INFO:127.0.0.1 - - [21/Nov/2022 10:57:06] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:23,104:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:23,105:INFO:127.0.0.1 - - [21/Nov/2022 10:57:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:24,392:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:24,393:INFO:127.0.0.1 - - [21/Nov/2022 10:57:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:24,571:INFO:127.0.0.1 - - [21/Nov/2022 10:57:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:24,727:INFO:127.0.0.1 - - [21/Nov/2022 10:57:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:25,590:INFO:127.0.0.1 - - [21/Nov/2022 10:57:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:28,499:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:28,500:INFO:127.0.0.1 - - [21/Nov/2022 10:57:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:33,273:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:33,274:INFO:127.0.0.1 - - [21/Nov/2022 10:57:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:33,461:INFO:127.0.0.1 - - [21/Nov/2022 10:57:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:33,515:INFO:127.0.0.1 - - [21/Nov/2022 10:57:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:34,461:INFO:127.0.0.1 - - [21/Nov/2022 10:57:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:35,264:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:35,264:INFO:127.0.0.1 - - [21/Nov/2022 10:57:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:35,430:INFO:127.0.0.1 - - [21/Nov/2022 10:57:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:35,507:INFO:127.0.0.1 - - [21/Nov/2022 10:57:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:36,454:INFO:127.0.0.1 - - [21/Nov/2022 10:57:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:37,001:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:37,001:INFO:127.0.0.1 - - [21/Nov/2022 10:57:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:37,171:INFO:127.0.0.1 - - [21/Nov/2022 10:57:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:37,229:INFO:127.0.0.1 - - [21/Nov/2022 10:57:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:38,175:INFO:127.0.0.1 - - [21/Nov/2022 10:57:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:57:50,899:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:50,900:INFO:127.0.0.1 - - [21/Nov/2022 10:57:50] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 10:57:57,153:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:57:57,154:INFO:127.0.0.1 - - [21/Nov/2022 10:57:57] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 10:59:10,134:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:59:10,139:INFO:127.0.0.1 - - [21/Nov/2022 10:59:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:59:10,750:INFO:127.0.0.1 - - [21/Nov/2022 10:59:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:10,834:INFO:127.0.0.1 - - [21/Nov/2022 10:59:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:11,776:INFO:127.0.0.1 - - [21/Nov/2022 10:59:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:33,361:INFO:Server has been stopped
+2022-11-21 10:59:34,934:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 10:59:42,102:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:59:42,106:INFO:127.0.0.1 - - [21/Nov/2022 10:59:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:59:42,348:INFO:127.0.0.1 - - [21/Nov/2022 10:59:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:43,232:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:59:43,234:INFO:127.0.0.1 - - [21/Nov/2022 10:59:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:59:43,436:INFO:127.0.0.1 - - [21/Nov/2022 10:59:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:43,460:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:59:43,462:INFO:127.0.0.1 - - [21/Nov/2022 10:59:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:59:43,659:INFO:127.0.0.1 - - [21/Nov/2022 10:59:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:44,637:INFO:127.0.0.1 - - [21/Nov/2022 10:59:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:49,268:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:59:49,269:INFO:127.0.0.1 - - [21/Nov/2022 10:59:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:59:49,437:INFO:127.0.0.1 - - [21/Nov/2022 10:59:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:49,593:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 10:59:49,594:INFO:127.0.0.1 - - [21/Nov/2022 10:59:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 10:59:49,808:INFO:127.0.0.1 - - [21/Nov/2022 10:59:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 10:59:50,837:INFO:127.0.0.1 - - [21/Nov/2022 10:59:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:00:50,884:INFO:127.0.0.1 - - [21/Nov/2022 11:00:50] "[33mGET /setcolor HTTP/1.1[0m" 404 -
+2022-11-21 11:00:51,160:INFO:127.0.0.1 - - [21/Nov/2022 11:00:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:00:52,190:INFO:127.0.0.1 - - [21/Nov/2022 11:00:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:00:55,842:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 11:00:55,844:INFO:127.0.0.1 - - [21/Nov/2022 11:00:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:00:56,008:INFO:127.0.0.1 - - [21/Nov/2022 11:00:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:00:57,030:INFO:127.0.0.1 - - [21/Nov/2022 11:00:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:02:19,893:INFO:Server has been stopped
+2022-11-21 11:02:26,141:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:02:49,778:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:02:49,782:INFO:127.0.0.1 - - [21/Nov/2022 11:02:49] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:03:03,835:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:03:03,836:INFO:127.0.0.1 - - [21/Nov/2022 11:03:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:03:04,030:INFO:127.0.0.1 - - [21/Nov/2022 11:03:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:03:04,994:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:03:04,995:INFO:127.0.0.1 - - [21/Nov/2022 11:03:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:03:05,179:INFO:127.0.0.1 - - [21/Nov/2022 11:03:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:03:05,370:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:03:05,371:INFO:127.0.0.1 - - [21/Nov/2022 11:03:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:03:05,556:INFO:127.0.0.1 - - [21/Nov/2022 11:03:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:03:05,800:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:03:05,801:INFO:127.0.0.1 - - [21/Nov/2022 11:03:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:03:05,996:INFO:127.0.0.1 - - [21/Nov/2022 11:03:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:03:07,016:INFO:127.0.0.1 - - [21/Nov/2022 11:03:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:04:18,212:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:04:18,214:INFO:127.0.0.1 - - [21/Nov/2022 11:04:18] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:04:19,188:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:04:19,190:INFO:127.0.0.1 - - [21/Nov/2022 11:04:19] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:04:47,138:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:04:47,139:INFO:127.0.0.1 - - [21/Nov/2022 11:04:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:04:47,385:INFO:127.0.0.1 - - [21/Nov/2022 11:04:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:04:48,130:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:04:48,131:INFO:127.0.0.1 - - [21/Nov/2022 11:04:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:04:48,346:INFO:127.0.0.1 - - [21/Nov/2022 11:04:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:04:49,374:INFO:127.0.0.1 - - [21/Nov/2022 11:04:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:05:39,143:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:05:39,149:INFO:127.0.0.1 - - [21/Nov/2022 11:05:39] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:05:51,245:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 71, in set_color
+    if unclean_color_name.startswith("#"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2022-11-21 11:05:51,246:INFO:127.0.0.1 - - [21/Nov/2022 11:05:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:05:51,475:INFO:127.0.0.1 - - [21/Nov/2022 11:05:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:05:52,469:INFO:127.0.0.1 - - [21/Nov/2022 11:05:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:06:03,126:INFO:Server has been stopped
+2022-11-21 11:07:42,140:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:07:52,546:INFO:127.0.0.1 - - [21/Nov/2022 11:07:52] "[33mPOST / HTTP/1.1[0m" 404 -
+2022-11-21 11:08:14,874:INFO:Server has been stopped
+2022-11-21 11:08:51,431:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:09:06,653:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:09:06,662:INFO:127.0.0.1 - - [21/Nov/2022 11:09:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:09:06,906:INFO:127.0.0.1 - - [21/Nov/2022 11:09:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:09:07,646:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:09:07,657:INFO:127.0.0.1 - - [21/Nov/2022 11:09:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:09:07,849:INFO:127.0.0.1 - - [21/Nov/2022 11:09:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:09:08,875:INFO:127.0.0.1 - - [21/Nov/2022 11:09:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:09:15,084:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:09:15,084:INFO:127.0.0.1 - - [21/Nov/2022 11:09:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:09:15,502:INFO:127.0.0.1 - - [21/Nov/2022 11:09:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:09:15,566:INFO:127.0.0.1 - - [21/Nov/2022 11:09:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:09:16,528:INFO:127.0.0.1 - - [21/Nov/2022 11:09:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:10:54,053:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:10:54,078:INFO:127.0.0.1 - - [21/Nov/2022 11:10:54] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:10:56,826:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:10:56,827:INFO:127.0.0.1 - - [21/Nov/2022 11:10:56] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:11:12,080:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:11:12,081:INFO:127.0.0.1 - - [21/Nov/2022 11:11:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:11:12,270:INFO:127.0.0.1 - - [21/Nov/2022 11:11:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:11:12,972:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:11:12,972:INFO:127.0.0.1 - - [21/Nov/2022 11:11:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:11:13,124:INFO:127.0.0.1 - - [21/Nov/2022 11:11:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:11:14,124:INFO:127.0.0.1 - - [21/Nov/2022 11:11:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:14:39,325:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 74, in set_color
+    color_name = clean_name(unclean_color_name)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/name_converter.py", line 6, in clean_name
+    name = name.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2022-11-21 11:14:39,329:INFO:127.0.0.1 - - [21/Nov/2022 11:14:39] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:15:12,580:INFO:Server has been stopped
+2022-11-21 11:15:17,350:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:16:21,011:INFO:Server has been stopped
+2022-11-21 11:16:34,015:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:16:41,355:INFO:127.0.0.1 - - [21/Nov/2022 11:16:41] "[33mPOST / HTTP/1.1[0m" 404 -
+2022-11-21 11:16:55,979:INFO:Server has been stopped
+2022-11-21 11:16:57,688:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:17:00,629:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 62, in set_color
+    X_Y = request.values.get()
+TypeError: get() missing 1 required positional argument: 'key'
+2022-11-21 11:17:00,634:INFO:127.0.0.1 - - [21/Nov/2022 11:17:00] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:17:22,831:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 62, in set_color
+    X_Y = request.values.get()
+TypeError: get() missing 1 required positional argument: 'key'
+2022-11-21 11:17:22,833:INFO:127.0.0.1 - - [21/Nov/2022 11:17:22] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:17:31,038:ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 62, in set_color
+    X_Y = request.values.get()
+TypeError: get() missing 1 required positional argument: 'key'
+2022-11-21 11:17:31,040:INFO:127.0.0.1 - - [21/Nov/2022 11:17:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-11-21 11:17:31,442:INFO:127.0.0.1 - - [21/Nov/2022 11:17:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:17:32,545:INFO:127.0.0.1 - - [21/Nov/2022 11:17:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-11-21 11:17:59,962:INFO:Server has been stopped
+2022-11-21 11:18:01,661:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:18:05,799:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+2022-11-21 11:18:05,803:INFO:127.0.0.1 - - [21/Nov/2022 11:18:05] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:19:43,656:INFO:Server has been stopped
+2022-11-21 11:19:45,389:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:19:49,556:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 62, in set_color
+    X_Y = request.get('Body', None)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Request' object has no attribute 'get'
+2022-11-21 11:19:49,561:INFO:127.0.0.1 - - [21/Nov/2022 11:19:49] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:20:28,063:INFO:Server has been stopped
+2022-11-21 11:20:29,903:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:20:32,889:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+TypeError: a bytes-like object is required, not 'str'
+2022-11-21 11:20:32,892:INFO:127.0.0.1 - - [21/Nov/2022 11:20:32] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:20:47,796:INFO:Server has been stopped
+2022-11-21 11:20:49,121:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:20:52,671:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 62, in set_color
+    X_Y = request.data['Body']
+TypeError: byte indices must be integers or slices, not str
+2022-11-21 11:20:52,673:INFO:127.0.0.1 - - [21/Nov/2022 11:20:52] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:21:03,509:INFO:Server has been stopped
+2022-11-21 11:21:04,845:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:21:10,743:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+TypeError: a bytes-like object is required, not 'str'
+2022-11-21 11:21:10,762:INFO:127.0.0.1 - - [21/Nov/2022 11:21:10] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:21:28,351:INFO:Server has been stopped
+2022-11-21 11:21:29,891:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:21:31,598:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 62, in set_color
+    X_Y = dict(request.data)
+TypeError: cannot convert dictionary update sequence element #0 to a sequence
+2022-11-21 11:21:31,603:INFO:127.0.0.1 - - [21/Nov/2022 11:21:31] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:22:19,739:INFO:Server has been stopped
+2022-11-21 11:22:21,168:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:22:24,633:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+AttributeError: 'dict' object has no attribute 'split'
+2022-11-21 11:22:24,637:INFO:127.0.0.1 - - [21/Nov/2022 11:22:24] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:22:32,824:INFO:Server has been stopped
+2022-11-21 11:22:34,389:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:22:37,097:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split(",")
+ValueError: not enough values to unpack (expected 2, got 1)
+2022-11-21 11:22:37,099:INFO:127.0.0.1 - - [21/Nov/2022 11:22:37] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:23:09,988:INFO:Server has been stopped
+2022-11-21 11:23:11,507:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:23:13,949:INFO:Server has been stopped
+2022-11-21 11:23:23,942:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:23:35,318:INFO:Attempting to connect to the bridge...
+2022-11-21 11:23:35,325:INFO:Using ip: 172.31.228.43
+2022-11-21 11:23:35,326:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:23:36,573:INFO:Attempting to connect to the bridge...
+2022-11-21 11:23:36,575:INFO:Using ip: 172.31.228.43
+2022-11-21 11:23:36,577:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:23:37,138:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:23:46,798:WARNING:ERROR: invalid value, [ 100 ,, for parameter, xy for light 5
+2022-11-21 11:23:54,506:INFO:The light was changed to the color 100,
+2022-11-21 11:24:56,388:INFO:Server has been stopped
+2022-11-21 11:25:11,050:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:25:13,858:INFO:Attempting to connect to the bridge...
+2022-11-21 11:25:13,859:INFO:Using ip: 172.31.228.43
+2022-11-21 11:25:13,859:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:25:13,859:INFO:Attempting to connect to the bridge...
+2022-11-21 11:25:13,859:INFO:Using ip: 172.31.228.43
+2022-11-21 11:25:13,859:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:25:13,860:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:25:13,937:WARNING:ERROR: invalid value, [ 100 ,, for parameter, xy for light 5
+2022-11-21 11:25:13,952:INFO:The light was changed to the color 100 150
+2022-11-21 11:25:13,953:INFO:127.0.0.1 - - [21/Nov/2022 11:25:13] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:26:20,537:INFO:Server has been stopped
+2022-11-21 11:26:27,218:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:26:57,908:INFO:Server has been stopped
+2022-11-21 11:26:59,507:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:27:04,836:INFO:Server has been stopped
+2022-11-21 11:27:06,158:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:27:12,772:INFO:Server has been stopped
+2022-11-21 11:27:15,269:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:27:19,277:INFO:Attempting to connect to the bridge...
+2022-11-21 11:27:19,278:INFO:Using ip: 172.31.228.43
+2022-11-21 11:27:19,278:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:27:19,278:INFO:Attempting to connect to the bridge...
+2022-11-21 11:27:19,279:INFO:Using ip: 172.31.228.43
+2022-11-21 11:27:19,279:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:27:19,280:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:27:19,355:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-21 11:27:19,615:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 121, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 14, in write_to_dynamo
+    Payload=json.dumps({phone_number[2:]:color})  #[2:] to get rid of +1 in phone number
+TypeError: 'NoneType' object is not subscriptable
+2022-11-21 11:27:19,621:INFO:127.0.0.1 - - [21/Nov/2022 11:27:19] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:27:36,499:INFO:Server has been stopped
+2022-11-21 11:27:39,593:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:27:42,257:INFO:Attempting to connect to the bridge...
+2022-11-21 11:27:42,258:INFO:Using ip: 172.31.228.43
+2022-11-21 11:27:42,258:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:27:42,259:INFO:Attempting to connect to the bridge...
+2022-11-21 11:27:42,259:INFO:Using ip: 172.31.228.43
+2022-11-21 11:27:42,259:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:27:42,259:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:27:42,331:INFO:Found credentials in shared credentials file: ~/.aws/credentials
+2022-11-21 11:27:42,410:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask.py", line 121, in set_color
+    write_to_dynamo(phone_number, color_name)  ## implement lambda_triggers
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/lambda_triggers.py", line 14, in write_to_dynamo
+    Payload=json.dumps({phone_number[2:]:color})  #[2:] to get rid of +1 in phone number
+TypeError: 'NoneType' object is not subscriptable
+2022-11-21 11:27:42,417:INFO:127.0.0.1 - - [21/Nov/2022 11:27:42] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:28:53,998:INFO:Server has been stopped
+2022-11-21 11:28:57,287:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:29:03,413:INFO:Attempting to connect to the bridge...
+2022-11-21 11:29:03,415:INFO:Using ip: 172.31.228.43
+2022-11-21 11:29:03,415:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:29:03,415:INFO:Attempting to connect to the bridge...
+2022-11-21 11:29:03,415:INFO:Using ip: 172.31.228.43
+2022-11-21 11:29:03,415:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:29:03,415:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:29:49,100:INFO:Server has been stopped
+2022-11-21 11:30:15,683:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:30:18,883:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 64, in set_color
+    x,y = X_Y.split()
+ValueError: not enough values to unpack (expected 2, got 1)
+2022-11-21 11:30:18,887:INFO:127.0.0.1 - - [21/Nov/2022 11:30:18] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:31:00,802:INFO:Attempting to connect to the bridge...
+2022-11-21 11:31:00,803:INFO:Using ip: 172.31.228.43
+2022-11-21 11:31:00,804:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:31:00,804:INFO:Attempting to connect to the bridge...
+2022-11-21 11:31:00,804:INFO:Using ip: 172.31.228.43
+2022-11-21 11:31:00,804:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:31:00,804:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:31:00,832:WARNING:ERROR: invalid value, [ 0.24796910245488613 ,, for parameter, xy for light 5
+2022-11-21 11:31:00,857:INFO:The light was changed to the color 0.24796910245488613 0.19986464673042365
+2022-11-21 11:31:00,857:INFO:127.0.0.1 - - [21/Nov/2022 11:31:00] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:31:12,040:WARNING:ERROR: invalid value, [ 0.24796910245488613 ,, for parameter, xy for light 5
+2022-11-21 11:31:12,085:INFO:The light was changed to the color 0.24796910245488613 0.19986464673042365
+2022-11-21 11:31:12,085:INFO:127.0.0.1 - - [21/Nov/2022 11:31:12] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:31:48,655:INFO:Server has been stopped
+2022-11-21 11:31:50,160:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:31:52,019:INFO:Attempting to connect to the bridge...
+2022-11-21 11:31:52,020:INFO:Using ip: 172.31.228.43
+2022-11-21 11:31:52,021:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:31:52,021:INFO:Attempting to connect to the bridge...
+2022-11-21 11:31:52,021:INFO:Using ip: 172.31.228.43
+2022-11-21 11:31:52,021:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:31:52,021:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:31:52,057:WARNING:ERROR: invalid value, [ 0.24796910245488613 ,, for parameter, xy for light 5
+2022-11-21 11:31:52,169:INFO:The light was changed to the color 0.24796910245488613 0.19986464673042365
+2022-11-21 11:31:52,170:INFO:127.0.0.1 - - [21/Nov/2022 11:31:52] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:32:14,459:INFO:Server has been stopped
+2022-11-21 11:32:16,005:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:32:18,091:INFO:Attempting to connect to the bridge...
+2022-11-21 11:32:18,092:INFO:Using ip: 172.31.228.43
+2022-11-21 11:32:18,092:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:32:18,092:INFO:Attempting to connect to the bridge...
+2022-11-21 11:32:18,092:INFO:Using ip: 172.31.228.43
+2022-11-21 11:32:18,092:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:32:18,092:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:32:18,124:WARNING:ERROR: invalid value, [ 0.24796910245488613 ,, for parameter, xy for light 5
+2022-11-21 11:32:18,168:INFO:The light was changed to the color 0.24796910245488613 0.19986464673042365
+2022-11-21 11:32:18,169:INFO:127.0.0.1 - - [21/Nov/2022 11:32:18] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:34:36,915:INFO:Server has been stopped
+2022-11-21 11:34:38,466:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:34:40,745:INFO:Attempting to connect to the bridge...
+2022-11-21 11:34:40,746:INFO:Using ip: 172.31.228.43
+2022-11-21 11:34:40,746:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:34:40,746:INFO:Attempting to connect to the bridge...
+2022-11-21 11:34:40,746:INFO:Using ip: 172.31.228.43
+2022-11-21 11:34:40,747:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:34:40,747:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:34:40,784:WARNING:ERROR: invalid value, [ 0.24796910245488613 ,, for parameter, xy for light 5
+2022-11-21 11:34:40,830:INFO:The light was changed to the color 0.24796910245488613 0.19986464673042365
+2022-11-21 11:34:40,831:INFO:127.0.0.1 - - [21/Nov/2022 11:34:40] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:36:15,619:INFO:Server has been stopped
+2022-11-21 11:36:17,000:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:36:18,477:INFO:Attempting to connect to the bridge...
+2022-11-21 11:36:18,479:INFO:Using ip: 172.31.228.43
+2022-11-21 11:36:18,479:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:36:18,479:INFO:Attempting to connect to the bridge...
+2022-11-21 11:36:18,479:INFO:Using ip: 172.31.228.43
+2022-11-21 11:36:18,479:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:36:18,479:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:36:18,504:WARNING:ERROR: invalid value, [ 0.24796910245488613 ,, for parameter, xy for light 5
+2022-11-21 11:36:18,529:INFO:The light was changed to the color 0.24796910245488613 0.19986464673042365
+2022-11-21 11:36:18,529:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 88, in set_color
+    return str(x,y)
+TypeError: decoding str is not supported
+2022-11-21 11:36:18,533:INFO:127.0.0.1 - - [21/Nov/2022 11:36:18] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:36:33,282:INFO:Server has been stopped
+2022-11-21 11:36:34,617:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:36:36,449:INFO:Attempting to connect to the bridge...
+2022-11-21 11:36:36,451:INFO:Using ip: 172.31.228.43
+2022-11-21 11:36:36,451:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:36:36,451:INFO:Attempting to connect to the bridge...
+2022-11-21 11:36:36,452:INFO:Using ip: 172.31.228.43
+2022-11-21 11:36:36,452:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:36:36,452:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:36:36,482:WARNING:ERROR: invalid value, [ 0.19986464673042365 ,, for parameter, xy for light 5
+2022-11-21 11:36:36,528:INFO:The light was changed to the color 0.24796910245488613 0.19986464673042365
+2022-11-21 11:36:36,529:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 88, in set_color
+    return str(x,y)
+TypeError: decoding str is not supported
+2022-11-21 11:36:36,533:INFO:127.0.0.1 - - [21/Nov/2022 11:36:36] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:39:26,527:INFO:Server has been stopped
+2022-11-21 11:39:28,410:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:39:38,505:INFO:Server has been stopped
+2022-11-21 11:39:39,343:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:39:59,135:INFO:Server has been stopped
+2022-11-21 11:39:59,942:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:40:53,615:INFO:Attempting to connect to the bridge...
+2022-11-21 11:40:53,618:INFO:Using ip: 172.31.228.43
+2022-11-21 11:40:53,618:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:40:53,618:INFO:Attempting to connect to the bridge...
+2022-11-21 11:40:53,618:INFO:Using ip: 172.31.228.43
+2022-11-21 11:40:53,618:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:40:53,619:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:40:53,676:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 79, in set_color
+    logging.info("The light was changed to the color " + x)
+TypeError: can only concatenate str (not "float") to str
+2022-11-21 11:40:53,681:INFO:127.0.0.1 - - [21/Nov/2022 11:40:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 11:41:17,705:INFO:Server has been stopped
+2022-11-21 11:41:18,478:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:41:20,789:INFO:Attempting to connect to the bridge...
+2022-11-21 11:41:20,789:INFO:Using ip: 172.31.228.43
+2022-11-21 11:41:20,790:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:41:20,790:INFO:Attempting to connect to the bridge...
+2022-11-21 11:41:20,790:INFO:Using ip: 172.31.228.43
+2022-11-21 11:41:20,790:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:41:20,790:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:41:20,815:WARNING:ERROR: invalid value, [ 0.4325 ,, for parameter, xy for light 5
+2022-11-21 11:41:20,860:INFO:The light was changed to the color 
+2022-11-21 11:41:20,861:INFO:127.0.0.1 - - [21/Nov/2022 11:41:20] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:41:59,244:INFO:Server has been stopped
+2022-11-21 11:42:00,276:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:42:02,643:INFO:Attempting to connect to the bridge...
+2022-11-21 11:42:02,644:INFO:Using ip: 172.31.228.43
+2022-11-21 11:42:02,644:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:42:02,644:INFO:Attempting to connect to the bridge...
+2022-11-21 11:42:02,644:INFO:Using ip: 172.31.228.43
+2022-11-21 11:42:02,644:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:42:02,644:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:42:02,726:INFO:The light was changed to the color 
+2022-11-21 11:42:02,727:INFO:127.0.0.1 - - [21/Nov/2022 11:42:02] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:43:32,186:INFO:Server has been stopped
+2022-11-21 11:43:33,116:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:43:35,928:INFO:Attempting to connect to the bridge...
+2022-11-21 11:43:35,929:INFO:Using ip: 172.31.228.43
+2022-11-21 11:43:35,929:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:43:35,930:INFO:Attempting to connect to the bridge...
+2022-11-21 11:43:35,930:INFO:Using ip: 172.31.228.43
+2022-11-21 11:43:35,930:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:43:35,930:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:43:35,991:INFO:The light was changed to the color blue
+2022-11-21 11:43:35,992:INFO:127.0.0.1 - - [21/Nov/2022 11:43:35] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 11:44:10,940:INFO:Server has been stopped
+2022-11-21 11:44:11,931:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:44:33,914:INFO:Server has been stopped
+2022-11-21 11:44:35,752:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 11:44:41,071:INFO:Attempting to connect to the bridge...
+2022-11-21 11:44:41,072:INFO:Using ip: 172.31.228.43
+2022-11-21 11:44:41,072:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:44:41,072:INFO:Attempting to connect to the bridge...
+2022-11-21 11:44:41,072:INFO:Using ip: 172.31.228.43
+2022-11-21 11:44:41,072:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 11:44:41,072:INFO:Server was successfully able to connect to the bridge
+2022-11-21 11:44:41,133:INFO:The light was changed to the color blue
+2022-11-21 11:44:41,133:INFO:127.0.0.1 - - [21/Nov/2022 11:44:41] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 12:17:00,456:INFO:Server has been stopped
+2022-11-21 17:18:16,494:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:18:48,312:INFO:Server has been stopped
+2022-11-21 17:18:50,350:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:34:12,546:INFO:Server has been stopped
+2022-11-21 17:34:15,722:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:36:47,471:INFO:Server has been stopped
+2022-11-21 17:36:51,618:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:37:44,908:INFO:Server has been stopped
+2022-11-21 17:37:45,881:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:39:01,562:INFO:Server has been stopped
+2022-11-21 17:39:02,652:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:39:44,601:INFO:Attempting to connect to the bridge...
+2022-11-21 17:39:44,602:INFO:Using ip: 172.31.228.43
+2022-11-21 17:39:44,602:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 17:39:44,602:INFO:Attempting to connect to the bridge...
+2022-11-21 17:39:44,602:INFO:Using ip: 172.31.228.43
+2022-11-21 17:39:44,602:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 17:39:44,602:INFO:Server was successfully able to connect to the bridge
+2022-11-21 17:39:44,680:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 71, in set_color
+    controller.light.saturation = saturation_val
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/phue.py", line 226, in saturation
+    self._set('sat', self._saturation)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/phue.py", line 129, in _set
+    return self.bridge.set_light(self.light_id, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/phue.py", line 887, in set_light
+    if 'error' in list(result[-1][0].keys()):
+IndexError: list index out of range
+2022-11-21 17:39:44,688:INFO:127.0.0.1 - - [21/Nov/2022 17:39:44] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 17:40:36,848:INFO:Server has been stopped
+2022-11-21 17:40:37,989:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:40:43,866:INFO:Attempting to connect to the bridge...
+2022-11-21 17:40:43,867:INFO:Using ip: 172.31.228.43
+2022-11-21 17:40:43,867:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 17:40:43,867:INFO:Attempting to connect to the bridge...
+2022-11-21 17:40:43,867:INFO:Using ip: 172.31.228.43
+2022-11-21 17:40:43,867:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 17:40:43,868:INFO:Server was successfully able to connect to the bridge
+2022-11-21 17:40:43,946:INFO:The light was changed to the color Blue
+2022-11-21 17:40:43,947:INFO:127.0.0.1 - - [21/Nov/2022 17:40:43] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 17:41:18,450:INFO:The light was changed to the color Red
+2022-11-21 17:41:18,451:INFO:127.0.0.1 - - [21/Nov/2022 17:41:18] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 17:46:40,098:INFO:The light was changed to the color Blue
+2022-11-21 17:46:40,101:INFO:127.0.0.1 - - [21/Nov/2022 17:46:40] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 17:46:53,353:INFO:The light was changed to the color Blue
+2022-11-21 17:46:53,354:INFO:127.0.0.1 - - [21/Nov/2022 17:46:53] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 17:47:21,025:INFO:The light was changed to the color Blue
+2022-11-21 17:47:21,026:INFO:127.0.0.1 - - [21/Nov/2022 17:47:21] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 17:47:26,186:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 58, in set_color
+    color, x, y, saturation_val= request.json["Body"].split()
+ValueError: too many values to unpack (expected 4)
+2022-11-21 17:47:26,201:INFO:127.0.0.1 - - [21/Nov/2022 17:47:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 17:53:19,735:INFO:Server has been stopped
+2022-11-21 17:53:21,135:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:55:20,392:INFO:Server has been stopped
+2022-11-21 17:56:27,296:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 17:57:50,661:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(",")
+ValueError: not enough values to unpack (expected 3, got 1)
+2022-11-21 17:57:50,668:INFO:127.0.0.1 - - [21/Nov/2022 17:57:50] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 17:58:27,901:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(",")
+ValueError: not enough values to unpack (expected 3, got 1)
+2022-11-21 17:58:27,903:INFO:127.0.0.1 - - [21/Nov/2022 17:58:27] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 17:58:51,379:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(",")
+ValueError: not enough values to unpack (expected 3, got 1)
+2022-11-21 17:58:51,380:INFO:127.0.0.1 - - [21/Nov/2022 17:58:51] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 17:58:56,024:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(",")
+ValueError: not enough values to unpack (expected 3, got 1)
+2022-11-21 17:58:56,025:INFO:127.0.0.1 - - [21/Nov/2022 17:58:56] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 18:00:10,361:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(",")
+ValueError: not enough values to unpack (expected 3, got 1)
+2022-11-21 18:00:10,364:INFO:127.0.0.1 - - [21/Nov/2022 18:00:10] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 18:02:56,479:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(",")
+ValueError: not enough values to unpack (expected 3, got 1)
+2022-11-21 18:02:56,486:INFO:127.0.0.1 - - [21/Nov/2022 18:02:56] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 18:03:02,649:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(",")
+ValueError: not enough values to unpack (expected 3, got 1)
+2022-11-21 18:03:02,651:INFO:127.0.0.1 - - [21/Nov/2022 18:03:02] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 18:03:53,601:INFO:Server has been stopped
+2022-11-21 18:03:54,996:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 18:04:00,586:INFO:Attempting to connect to the bridge...
+2022-11-21 18:04:00,587:INFO:Using ip: 172.31.228.43
+2022-11-21 18:04:00,587:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 18:04:00,588:INFO:Attempting to connect to the bridge...
+2022-11-21 18:04:00,588:INFO:Using ip: 172.31.228.43
+2022-11-21 18:04:00,588:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 18:04:00,588:INFO:Server was successfully able to connect to the bridge
+2022-11-21 18:04:00,659:INFO:The light was changed
+2022-11-21 18:04:00,659:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2022-11-21 18:04:00,663:INFO:127.0.0.1 - - [21/Nov/2022 18:04:00] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-21 18:04:35,378:INFO:Server has been stopped
+2022-11-21 18:04:36,539:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-21 18:04:43,615:INFO:Attempting to connect to the bridge...
+2022-11-21 18:04:43,616:INFO:Using ip: 172.31.228.43
+2022-11-21 18:04:43,616:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 18:04:43,617:INFO:Attempting to connect to the bridge...
+2022-11-21 18:04:43,617:INFO:Using ip: 172.31.228.43
+2022-11-21 18:04:43,617:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-21 18:04:43,617:INFO:Server was successfully able to connect to the bridge
+2022-11-21 18:04:43,692:INFO:The light was changed
+2022-11-21 18:04:43,692:INFO:127.0.0.1 - - [21/Nov/2022 18:04:43] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 18:05:58,117:INFO:The light was changed
+2022-11-21 18:05:58,122:INFO:127.0.0.1 - - [21/Nov/2022 18:05:58] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 18:06:03,966:INFO:The light was changed
+2022-11-21 18:06:03,967:INFO:127.0.0.1 - - [21/Nov/2022 18:06:03] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 18:11:03,305:INFO:The light was changed
+2022-11-21 18:11:03,309:INFO:127.0.0.1 - - [21/Nov/2022 18:11:03] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 18:15:12,840:INFO:The light was changed
+2022-11-21 18:15:12,849:INFO:127.0.0.1 - - [21/Nov/2022 18:15:12] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-21 18:15:28,100:INFO:The light was changed
+2022-11-21 18:15:28,101:INFO:127.0.0.1 - - [21/Nov/2022 18:15:28] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-28 09:54:58,364:INFO:Server has been stopped
+2022-11-28 09:56:20,473:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-28 09:56:44,968:INFO:Attempting to connect to the bridge...
+2022-11-28 09:56:44,969:INFO:Using ip: 172.31.228.43
+2022-11-28 09:56:44,969:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-28 09:56:44,969:INFO:Attempting to connect to the bridge...
+2022-11-28 09:56:44,969:INFO:Using ip: 172.31.228.43
+2022-11-28 09:56:44,969:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-28 09:56:44,970:INFO:Server was successfully able to connect to the bridge
+2022-11-28 09:56:45,148:INFO:The light was changed
+2022-11-28 09:56:45,149:INFO:127.0.0.1 - - [28/Nov/2022 09:56:45] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-28 09:56:45,242:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(" ")
+ValueError: too many values to unpack (expected 3)
+2022-11-28 09:56:45,245:INFO:127.0.0.1 - - [28/Nov/2022 09:56:45] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-28 09:57:46,332:INFO:The light was changed
+2022-11-28 09:57:46,343:INFO:127.0.0.1 - - [28/Nov/2022 09:57:46] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-28 09:57:46,436:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(" ")
+ValueError: too many values to unpack (expected 3)
+2022-11-28 09:57:46,438:INFO:127.0.0.1 - - [28/Nov/2022 09:57:46] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-28 09:58:10,274:INFO:The light was changed
+2022-11-28 09:58:10,275:INFO:127.0.0.1 - - [28/Nov/2022 09:58:10] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-28 09:58:10,369:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(" ")
+ValueError: too many values to unpack (expected 3)
+2022-11-28 09:58:10,369:INFO:127.0.0.1 - - [28/Nov/2022 09:58:10] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-28 10:07:17,103:INFO:The light was changed
+2022-11-28 10:07:17,119:INFO:127.0.0.1 - - [28/Nov/2022 10:07:17] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-28 10:07:17,234:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(" ")
+ValueError: too many values to unpack (expected 3)
+2022-11-28 10:07:17,240:INFO:127.0.0.1 - - [28/Nov/2022 10:07:17] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-29 09:46:30,643:INFO:Server has been stopped
+2022-11-29 09:47:06,098:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-11-29 09:48:55,303:INFO:Attempting to connect to the bridge...
+2022-11-29 09:48:55,306:INFO:Using ip: 172.31.228.43
+2022-11-29 09:48:55,306:INFO:Using username from config: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-29 09:48:55,306:INFO:Attempting to connect to the bridge...
+2022-11-29 09:48:55,306:INFO:Using ip: 172.31.228.43
+2022-11-29 09:48:55,306:INFO:Using username: We8ZKN3pXnD0Rly1GwPCaXCRhxSmCuoaGmuAxpQS
+2022-11-29 09:48:55,307:INFO:Server was successfully able to connect to the bridge
+2022-11-29 09:48:55,844:INFO:The light was changed
+2022-11-29 09:48:55,847:INFO:127.0.0.1 - - [29/Nov/2022 09:48:55] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-29 09:48:55,967:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+    x, y, saturation_val= request.json["Body"].split(" ")
+ValueError: too many values to unpack (expected 3)
+2022-11-29 09:48:55,975:INFO:127.0.0.1 - - [29/Nov/2022 09:48:55] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-29 09:54:39,552:INFO:The light was changed
+2022-11-29 09:54:39,556:INFO:127.0.0.1 - - [29/Nov/2022 09:54:39] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-29 09:54:39,671:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+ValueError: too many values to unpack (expected 3)
+2022-11-29 09:54:39,674:INFO:127.0.0.1 - - [29/Nov/2022 09:54:39] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2022-11-29 09:57:43,882:INFO:The light was changed
+2022-11-29 09:57:43,882:INFO:127.0.0.1 - - [29/Nov/2022 09:57:43] "[37mPOST / HTTP/1.1[0m" 200 -
+2022-11-29 09:57:44,054:ERROR:Exception on / [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jack11wagner/Courses/399/Hue_SMS_Cloud_Computing_Project/hue_sms/src/hue_flask_aws.py", line 59, in set_color
+ValueError: too many values to unpack (expected 3)
+2022-11-29 09:57:44,054:INFO:127.0.0.1 - - [29/Nov/2022 09:57:44] "[35m[1mPOST / HTTP/1.1[0m" 500 -

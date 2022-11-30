@@ -1,0 +1,9 @@
+phue
+pytest
+bs4
+flask
+twilio
+datetime
+dynaconf
+thefuzz[speedup]
+Pillow
