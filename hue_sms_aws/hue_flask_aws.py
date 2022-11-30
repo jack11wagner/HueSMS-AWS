@@ -22,7 +22,6 @@ def set_color():
         logging.info("Server unable to connect to the Hue Light")
         response = MessagingResponse()
         response.message("Server unable to connect to the Hue Light")
-        return str(response)
 
     try:
         controller.light.xy = (x, y)
@@ -33,8 +32,7 @@ def set_color():
         logging.info("Server unable to connect to the Hue Light")
         response = MessagingResponse()
         response.message("I'm sorry, but I cannot connect to the Hue Light. Please try again later.")
-        return str(response)
-    return "success"
+    return "successfully changed light."
 
 
 if __name__ == '__main__':
