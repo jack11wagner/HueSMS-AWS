@@ -4,3 +4,4 @@ dash_core_components
 dash_html_components
 datetime
 pandas
+boto3
