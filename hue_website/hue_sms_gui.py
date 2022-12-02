@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import boto3
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-resource = boto3.resource("dynamodb")
+resource = boto3.resource("dynamodb", "us-east-1")
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 
@@ -47,7 +47,7 @@ def generate_pie_chart_dependencies(color_RGB_dict):
 
 def setup():
     labels, sizes, pie_chart_colors_RGB = generate_pie_chart_dependencies(color_RGB_dict)
-    fig = px.pie(names=labels, values=sizes, color=labels, color_discrete_map=pie_chart_colors_RGB, width=150,
+    fig = px.pie(names=labels, values=sizes, color=labels, color_discrete_map=pie_chart_colors_RGB, width=1500,
                  height=900)
 
     app.layout = html.Div(children=[
