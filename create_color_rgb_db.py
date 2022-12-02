@@ -7,6 +7,8 @@ Program handles the creation and loading of the table.
 
 """
 import boto3
+import string
+
 
 def set_up():
     return boto3.resource("dynamodb"), boto3.client("dynamodb")
@@ -49,14 +51,25 @@ def delete_table(client, tbl_name):
         print("Error deleting table, resource not found")
 
 
+def clean_name(name):
+    name = name.title()
+    name = name.strip()
+    name = name.replace('\'', '')
+    name = name.replace('-', ' ')
+    return name.translate(str.maketrans("", "", string.punctuation))
+
+
 def load_data(resource):
     table = resource.Table("ColorsRGB")
-    colors_file = open("./hue_sms/src/colors.csv")
+    colors_file = open("./hue_sms_aws/colors.csv")
     for line in colors_file.readlines():
         line = line.strip()
-        color, R,G,B = line.split(',')
-        item_json = {"Color":color, "R":int(R), "G":int(G), "B":int(B)}
+        color, R, G, B = line.split(',')
+        color = clean_name(color)
+
+        item_json = {"Color": color, "R": int(R), "G": int(G), "B": int(B)}
         table.put_item(Item=item_json)
+        print("Color ", item_json, "added.")
 
 
 def get_table_list(client):

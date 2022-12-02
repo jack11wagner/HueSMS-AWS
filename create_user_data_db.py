@@ -63,7 +63,10 @@ def format_data(color_data):
         data['Time'] = pd.to_datetime(data['Time'])
         return data
 
-    format_time(format_phone_number(color_data))
+    def format_color(data):
+        data["Colors"] = data["Colors"].str.title()
+
+    format_color(format_time(format_phone_number(color_data)))
     return color_data
 
 
@@ -71,6 +74,7 @@ def get_color_counts_dict_for_phone_number(color_data, phone_number):
     color_data_dict = pd.DataFrame(
         pd.DataFrame(color_data[color_data['Phone #'].str.startswith(phone_number)])["Colors"].value_counts()).to_dict()
     color_data_dict["PHONE-NUMBER"] = phone_number
+
     return color_data_dict
 
 
