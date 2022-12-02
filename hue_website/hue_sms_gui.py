@@ -48,7 +48,7 @@ def generate_pie_chart_dependencies(color_RGB_dict):
 def setup():
     labels, sizes, pie_chart_colors_RGB = generate_pie_chart_dependencies(color_RGB_dict)
     fig = px.pie(names=labels, values=sizes, color=labels, color_discrete_map=pie_chart_colors_RGB, width=1500,
-                 height=900)
+                 height=700)
 
     app.layout = html.Div(children=[
         html.Div([
@@ -75,7 +75,7 @@ def update_graph_live(n):
 
     # change Font Size for PieChart/Legend
     fig.update_layout(font=dict(size=15))
-    fig.update_traces(textposition='inside', textinfo='label+percent')
+    fig.update_traces(textposition='inside', textinfo='percent')
     return fig
 
 
