@@ -22,7 +22,7 @@ Final Project for CSCI 390
 - Through the use of various AWS Services such as _API Gateway_, _AWS Lambda_, _DynamoDB_ and _Amazon Elastic Compute Cloud_ we were able to move almost all processes from an on-premises Raspberry Pi to the AWS Cloud 
 - 
 ### Basic Structure
-- ![HueSMS](https://github.com/jack11wagner/aws_hue_light_399/hue_sms_aws_structure.png?raw=true)
+![HueSMS](https://github.com/jack11wagner/aws_hue_light_399/blob/main/hue_sms_aws_structure.png)
 
 
 
